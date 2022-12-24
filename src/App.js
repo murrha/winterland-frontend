@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar.js' 
+
+import Contact from './pages/Contact'
+import Donate from './pages/Donate'
+import Home from './pages/Home'
+import Receive from './pages/Receive'
+import Billing from './pages/Billing'
+import ThankYou from './pages/ThankYou'
+
+
+import {Route, Routes} from 'react-router-dom'
+import CartProvider from './CartContext.js'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  console.log(window.location.pathname)
+
+  return(
+    <>
+    <CartProvider>
+    <Navbar/>
+
+    <div className='container'>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/donate" element={<Donate/>} />
+        <Route path="/receive" element={<Receive/>} />
+        <Route path="/billing" element={<Billing/>}/>
+        <Route path="/thank-you" element={<ThankYou/>}/>
+      </Routes>
     </div>
-  );
+    </CartProvider>
+    </>
+    )
 }
 
 export default App;
