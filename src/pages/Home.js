@@ -14,7 +14,7 @@ export default class Home extends Component {
         <br/>
         <p>Food insecurity is on the rise in the city of Los Angeles.</p>
 
-        <p>No one should go hungry, so we have created a website where households in need can share their shopping list, and donors can offer money to help with the expenses.</p>
+        <p>No one should go hungry, so households in need can share their grocery list and anyone can donate money to help with the expenses.</p>
         </div>
 
         <div className="photos">
