@@ -54,7 +54,7 @@ body {
 }
 
 .photos{
-  background-image: url(/src/images/donations.jpg);
+  background-image: url(/src/donations.jpg);
   height: 100vh;
   width: 100%;
   background-position: center center;

@@ -1,17 +1,13 @@
 import React, { Component } from 'react'
-import {Button} from 'react-bootstrap'
-import {Link} from 'react-router-dom'
+import OrderCard from '../components/OrderCard'
 
 export default class Donate extends Component {
   render() {
     
     return (
       <>
-      <h2 align="center" style={{margin: '20px'}}>Select a list</h2>
-
-      <Link to="/billing">
-        <Button variant="primary">Next</Button>
-      </Link>
+      <h2 align="center" style={{margin: '20px'}}>Select an order</h2>
+      <OrderCard/>
       </>
     )
   }

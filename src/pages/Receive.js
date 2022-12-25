@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Store from './Store';
 import {Button} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 
 export default class Receive extends Component {
   render() {
@@ -9,7 +10,9 @@ export default class Receive extends Component {
       <div>
         <Store/>
         <br/>
-        <Button>Next</Button>
+        <Link to="/basket">
+          <Button variant="primary" style={{margin: '20px'}}>Next</Button>
+        </Link>
       </div>
     )
   }
